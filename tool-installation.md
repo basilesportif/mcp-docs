@@ -90,8 +90,8 @@ mcpServers:
   
   fetch:
     type: "stdio"
-    command: "npx"
-    args: ["@modelcontextprotocol/server-fetch"]
+    command: "/opt/homebrew/bin/uvx"
+    args: ["mcp-server-fetch"]
     iconPath: "/assets/tools/globe.svg"
   
   brave-search:
