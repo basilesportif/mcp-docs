@@ -80,13 +80,13 @@ endpoints:
 mcpServers:
   wcgw:
     type: "stdio"
-    command: "uv"
+    command: "/opt/homebrew/bin/uv"
     args: ["tool", "run", "--from", "wcgw@latest", "--python", "3.12", "wcgw_mcp"]
     iconPath: "/assets/tools/terminal.svg"
   
   fetch:
     type: "stdio"
-    command: "uvx"
+    command: "/opt/homebrew/bin/uvx"
     args: ["mcp-server-fetch"]
     iconPath: "/assets/tools/globe.svg"
 ```
