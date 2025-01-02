@@ -42,11 +42,17 @@ brave-search:
   args: ["-c", "export BRAVE_API_KEY=\"your-api-key\" && npx @modelcontextprotocol/server-brave-search"]
 ```
 
-## Anthropic Configuration
+## Required Configuration
 
-For Claude to work with MCP, configure the Anthropic section in `librechat.yaml`:
+Your `librechat.yaml` needs these essential configurations:
 
 ```yaml
+# Enable Agent Builder
+endpoints:
+  agents:
+    disableBuilder: false
+
+# Anthropic Configuration
 endpoints:
   anthropic:
     models:
