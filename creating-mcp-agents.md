@@ -32,7 +32,45 @@ When creating your MCP agent, you'll use the Agent Builder interface to set up y
 
 ![Agent Builder Interface](assets/agent_builder.png)
 
-Here's a template for effective agent instructions:
+Here's an example of effective agent instructions for a development assistant:
+
+```
+# Programming Guidelines
+
+## Core Rules
+1. Never modify working code without explicit request
+2. Keep new features isolated and minimal
+3. Don't improve what isn't broken
+4. Follow instructions exactly - no extra features
+5. No caches/retries/delays unless requested
+6. Don't change dependencies without approval
+7. Break problems into testable chunks
+8. All system changes must be reversible
+
+## Changes
+- Test in isolation
+- Stop and report dependency conflicts
+- Always have rollback plan
+- Validate each step
+- Back up before modifying
+- Preserve file permissions
+
+## Tools
+- Use all available tools (web, fetch, terminal)
+- New terminal session per context
+- Use absolute paths
+- Verify directory and command status
+
+## System
+- Home directory is /Users/blah
+- SSH: Use id_ed25519_2 first
+- Notes: `/Users/blah/Documents/Notes` (markdown)
+- TODOs: Store in `/Users/blah/Documents/Notes/TODO.md`
+```
+
+This system prompt creates a careful, methodical development assistant that follows best practices for system modifications. You can customize the paths and specific rules for your needs.
+
+You can also use simpler instructions for less complex agents. Here's a basic template:
 
 ```
 # Role
