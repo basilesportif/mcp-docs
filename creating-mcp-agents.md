@@ -2,12 +2,6 @@
 
 This guide explains how to create and configure an agent that uses MCP (Mission Control Protocol) capabilities in LibreChat.
 
-## Agent Builder Interface
-
-LibreChat provides a user-friendly Agent Builder interface for creating MCP-enabled agents:
-
-![Agent Builder Interface](assets/agent_builder.png)
-
 ## Setting Up an MCP Agent
 
 1. **Access Agent Builder**
@@ -32,9 +26,13 @@ LibreChat provides a user-friendly Agent Builder interface for creating MCP-enab
      - Fetch for web access
      - Brave Search for internet searches
 
-## Example Instructions
+## Creating Instructions in Agent Builder
 
-Here's a template for agent instructions:
+When creating your MCP agent, you'll use the Agent Builder interface to set up your instructions:
+
+![Agent Builder Interface](assets/agent_builder.png)
+
+Here's a template for effective agent instructions:
 
 ```
 # Role
