@@ -32,7 +32,13 @@ This repository contains comprehensive documentation for setting up and using Li
 - [Anthropic Setup](mcp-configuration.md#anthropic-configuration)
 - [Security Settings](mcp-configuration.md#security-considerations)
 
-### 5. Troubleshooting
+### 5. Creating MCP Agents
+- [Agent Builder Guide](creating-mcp-agents.md)
+- [Best Practices](creating-mcp-agents.md#best-practices)
+- [Example Instructions](creating-mcp-agents.md#example-instructions)
+- [Testing and Maintenance](creating-mcp-agents.md#testing-your-agent)
+
+### 6. Troubleshooting
 - [MongoDB Issues](installation.md#mongodb-issues)
 - [Node.js and NVM Issues](installation.md#nodejs-and-nvm-issues)
 - [Tool-Specific Issues](tool-installation.md#troubleshooting)
