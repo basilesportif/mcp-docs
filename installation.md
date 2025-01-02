@@ -1,13 +1,50 @@
-# Installing LibreChat with npm
+# Installing LibreChat with npm and nvm
 
-This guide covers how to install LibreChat locally using npm, including MongoDB setup options.
+This guide covers how to install LibreChat locally using npm and nvm (Node Version Manager), including MongoDB setup options.
 
 ## Prerequisites
 
-- Node.js (Latest LTS version recommended)
 - Git
-- npm
 - MongoDB (local or cloud)
+- Terminal access
+
+## Node.js Setup with NVM
+
+1. **Install NVM**
+
+   On macOS and Linux:
+   ```bash
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+   ```
+
+   On Windows:
+   - Use [nvm-windows](https://github.com/coreybutler/nvm-windows)
+   - Download and run the installer from the [latest release](https://github.com/coreybutler/nvm-windows/releases)
+
+2. **Restart your terminal or reload your profile**
+   ```bash
+   # On macOS/Linux, run one of these depending on your shell:
+   source ~/.bashrc
+   source ~/.zshrc
+   source ~/.profile
+   ```
+
+3. **Verify NVM installation**
+   ```bash
+   nvm --version
+   ```
+
+4. **Install Node.js LTS version**
+   ```bash
+   nvm install --lts
+   nvm use --lts
+   ```
+
+5. **Verify Node.js and npm installation**
+   ```bash
+   node --version
+   npm --version
+   ```
 
 ## Installation Steps
 
@@ -130,6 +167,24 @@ mongosh
 
 ## Troubleshooting
 
+### Node.js and NVM Issues
+1. **NVM Command Not Found**
+   - Ensure NVM is properly installed
+   - Check if NVM path is in your shell profile
+   - Try reloading your shell profile or restart terminal
+
+2. **Node Version Switching Failed**
+   - Clear NVM cache: `nvm cache clear`
+   - Reinstall desired version: `nvm install [version]`
+   - Check for version availability: `nvm ls-remote`
+
+3. **npm Global Packages Missing After Node Switch**
+   - Reinstall global packages for new version:
+     ```bash
+     nvm install [version] --reinstall-packages-from=[old-version]
+     ```
+   - Or use `nvm reinstall-packages` for current version
+
 ### MongoDB Issues
 1. **Connection Refused**
    - Check if MongoDB service is running
@@ -161,12 +216,31 @@ mongosh
 
 ## Development Tips
 
-1. For local development, use:
-```bash
-npm run dev
-```
+1. **Node.js Version Management**
+   ```bash
+   # List installed Node.js versions
+   nvm ls
+   
+   # Install a specific version
+   nvm install 18.16.0
+   
+   # Switch to a specific version
+   nvm use 18.16.0
+   
+   # Set default Node.js version
+   nvm alias default 18.16.0
+   ```
 
-2. Monitor MongoDB:
+2. **Local Development**
+   ```bash
+   # Ensure correct Node.js version
+   nvm use --lts
+   
+   # Start development server
+   npm run dev
+   ```
+
+3. **Monitor MongoDB**:
 ```bash
 # Local MongoDB monitoring
 mongosh

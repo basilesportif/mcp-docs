@@ -33,34 +33,13 @@ fetch:
   iconPath: "/assets/tools/globe.svg"
 ```
 
-### 3. GSuite Integration
-
-```yaml
-mcp-gsuite:
-  type: "stdio"
-  command: "/opt/homebrew/bin/uv"
-  args: ["--directory", "/path/to/mcp-gsuite", "run", "mcp-gsuite"]
-  env:
-    MCP_GSUITE_EMAIL: "your-email@gmail.com"
-  iconPath: "/assets/tools/mail.svg"
-```
-
-### 4. Brave Search
+### 3. Brave Search
 
 ```yaml
 brave-search:
   type: "stdio"
   command: "sh"
   args: ["-c", "export BRAVE_API_KEY=\"your-api-key\" && npx @modelcontextprotocol/server-brave-search"]
-```
-
-## Environment Variables
-
-In the `.env` file, you need to set:
-
-```env
-# MCP Configuration
-MCP_GSUITE_EMAIL=your-email@gmail.com
 ```
 
 ## Anthropic Configuration
