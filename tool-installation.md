@@ -55,13 +55,13 @@ source .venv/bin/activate  # On Unix/macOS
 uv pip install wcgw
 ```
 
-### 2. Fetch Server
+### 2. Fetch Server (uvx)
 
-The fetch server is installed using npx:
+The fetch server runs through uvx:
 
 ```bash
-# Ensure you have Node.js installed (see installation.md for nvm setup)
-npm install -g @modelcontextprotocol/server-fetch
+# Install uvx using UV
+uv pip install uvx
 ```
 
 ### 3. Brave Search

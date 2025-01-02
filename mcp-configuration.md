@@ -28,10 +28,12 @@ mcpServers:
 ```yaml
 fetch:
   type: "stdio"
-  command: "/opt/homebrew/bin/uvx"
+  command: "uvx"
   args: ["mcp-server-fetch"]
   iconPath: "/assets/tools/globe.svg"
 ```
+
+Note: Make sure `uvx` is installed using `uv pip install uvx`
 
 ### 3. Brave Search
 

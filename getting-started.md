@@ -53,8 +53,8 @@ MONGO_URI=mongodb://localhost:27017/librechat
 # WCGW for terminal access
 uv pip install wcgw
 
-# Fetch for web access
-npm install -g @modelcontextprotocol/server-fetch
+# uvx for web access (Fetch)
+uv pip install uvx
 
 # Brave Search (optional)
 npm install -g @modelcontextprotocol/server-brave-search
@@ -86,8 +86,8 @@ mcpServers:
   
   fetch:
     type: "stdio"
-    command: "npx"
-    args: ["@modelcontextprotocol/server-fetch"]
+    command: "uvx"
+    args: ["mcp-server-fetch"]
     iconPath: "/assets/tools/globe.svg"
 ```
 
